@@ -20,8 +20,6 @@ before_install:
   - go get code.google.com/p/go.tools/cmd/cover
 
 install: 
-  - shippable_retry shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
-  - npm install
   - go get -d -v ./... && go build -v ./...
 
 # Make folders for the reports
